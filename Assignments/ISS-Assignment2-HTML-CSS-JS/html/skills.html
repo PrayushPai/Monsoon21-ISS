@@ -1,0 +1,93 @@
+
+<!DOCTYPE HTML> 
+<html> 
+    <head> 
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="../css/style.css">
+         <script src="../js/script.js"></script>
+        	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <title> 
+            My Homepage
+        </title>
+    </head> 
+      
+    <body>
+        <div class="box-area">
+		<header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="index.html">Homepage</a>
+				</div>
+				<nav class="borr">
+					<a href="index.html" onhover = "col()">Home</a> <a href="education.html" onhover = "col()">Education</a> <a href="skills.html" onhover = "col()">Skills</a> <a href="memories.html" onhover = "col()">Memories</a> 
+				</nav>
+			</div>
+		</header>
+        <div class="banner-area">
+			<h2>THE BLOG</h2>
+		</div>
+			<h2>Welcome !!!</h2>
+		</div>
+		<div class="content-area">
+			<div class="wrapper">
+				<h2>Talent Mangement</h2>
+                <br>
+                <form id="input">
+                
+                <h4>Enter Name: <h4><br>
+                <input type="text" name="Name" id="name" >
+                <br><br>
+
+                <h4>Enter Skill: </h4><br>
+                <input type="text" name="skill" id="skill" >
+                <br><br>
+
+                <h4>Enter Skill Proficiency: </h4><br>
+                <select name="level" id="level" >
+                    <option value="untrained">Proficient</option>
+                    <option value="partlytrained">Intermediate </option>
+                    <option value="Trained">Beginner</option>
+                </select>
+
+                <br><br>
+
+                <button class="submitting" type="button" onclick="formsubmission()">Submit</button>
+            </form>
+
+            <div>
+
+                <br><br><br>
+                <table class= "center" >
+                    <tr>
+                        <th>Name </th>
+                        <th>Skill </th>
+                        <th>Level </th>
+                    </tr>
+
+                    <tbody id="add">
+
+                    </tbody>
+                </table>
+
+            </div>
+				<p></p>
+                
+            </div>
+		</div>
+	</div>
+    <script>
+        function formsubmission()
+{
+    var name = document.getElementById("name").value;
+    var skill = document.getElementById("skill").value;
+    var prof = document.getElementById("level").options[document.getElementById("level").selectedIndex].text;
+
+        document.getElementById("add").innerHTML+=("<tr><td>"+name+"</td><td>"+skill+"</td><td>"+prof+"</td></tr>");
+        document.getElementById("error").innerHTML="";
+}
+        </script>
+
+</form> 
+    </body> 
+</html>            
